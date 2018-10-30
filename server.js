@@ -46,11 +46,15 @@ app.get('/about',(req,res)=>{
 
   });
 });
+app.get('/Projects',(req,res)=>{
+  res.render('projects.hbs');
+});
 
 app.get('/bad',(req,res)=>{
   errorMessage='Unable to fulfill the request';
   res.send({Error:errorMessage});
 });
+
 app.listen(port,()=>{
   console.log('Server is up on port '+ port);
 });
